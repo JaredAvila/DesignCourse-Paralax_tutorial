@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Paralax Example</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <title>Paralax Example</title>
   </head>
   <body>
     <div class="container">
@@ -22,10 +22,14 @@
           />
         </nav>
       </header>
-      <h1>Preserve Nature</h1>
-      <div class="line"></div>
+      <h1 class="lax" data-lax-translate-y="0 0, 400 -400">Preserve Nature</h1>
+      <div class="line lax" data-lax-opacity="0 1, 100 0"></div>
     </div>
-    <div class="container secondary">
+    <div
+      class="container secondary lax"
+      data-lax-translate-y="0 0, 400 -500"
+      data-lax-opacity="0 0, 300 1"
+    >
       <h2>Strategic</h2>
       <p class="subtext">Alliances</p>
       <p>
@@ -44,12 +48,17 @@
     <img
       src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/mountains.png"
       alt="mountains"
-      class="mountains"
+      class="mountains lax"
+      data-lax-translate-y="0 1, 400 -100"
     />
     <img
       src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/forest.png"
       alt="trees"
-      class="trees"
+      class="trees lax"
+      data-lax-translate-y="0 1, 400 -260"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
